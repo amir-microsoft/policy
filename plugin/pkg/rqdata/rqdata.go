@@ -116,7 +116,7 @@ func NewMapping(emptyValue string) *Mapping {
 			}
 			return ""
 		},
-		"response_ips": func(state request.Request) string {
+		"response_ips": func(state request.Request) []string {
 			result := responseIpsExtractor(state)
 			log.Debugf("coredns::policy/firewall, Response IPs are: '%s'", result)
 			return result
@@ -125,7 +125,7 @@ func NewMapping(emptyValue string) *Mapping {
 	return &Mapping{replacements, emptyValue}
 }
 
-func responseIpsExtractor(state request.Request) string {
+func responseIpsExtractor(state request.Request) []string {
 	rr, ok := state.W.(*response.Reader)
 	if ok && rr.Msg != nil {
 		ipsSlice := respIPs(rr.Msg)
@@ -134,13 +134,10 @@ func responseIpsExtractor(state request.Request) string {
 			ipsStrSlice = append(ipsStrSlice, addrToRFC3986(ip.String()))
 		}
 		if len(ipsStrSlice) > 0 {
-			ips, err := json.Marshal(ipsStrSlice)
-			if err == nil {
-				return string(ips)
-			}
+			return ipsStrSlice
 		}
 	}
-	return ""
+	return []string{}
 }
 
 func (m *Mapping) ValidField(name string) bool {
