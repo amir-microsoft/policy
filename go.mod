@@ -1,4 +1,4 @@
-module github.com/coredns/policy
+module github.com/amir-microsoft/policy
 
 go 1.12
 

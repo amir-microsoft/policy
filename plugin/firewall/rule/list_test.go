@@ -8,7 +8,7 @@ import (
 
 	"github.com/coredns/coredns/plugin/test"
 	"github.com/coredns/coredns/request"
-	"github.com/coredns/policy/plugin/firewall/policy"
+	"github.com/amir-microsoft/policy/plugin/firewall/policy"
 
 	"github.com/miekg/dns"
 )

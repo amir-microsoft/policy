@@ -3,8 +3,8 @@ package themis
 import (
 	"bytes"
 	"fmt"
-	"github.com/coredns/policy/plugin/firewall/policy"
-	"github.com/coredns/policy/plugin/pkg/rqdata"
+	"github.com/amir-microsoft/policy/plugin/firewall/policy"
+	"github.com/amir-microsoft/policy/plugin/pkg/rqdata"
 	"github.com/miekg/dns"
 	"net"
 	"strings"

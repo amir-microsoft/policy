@@ -10,8 +10,8 @@ import (
 	"strings"
 
 	"github.com/coredns/coredns/plugin/metadata"
-	"github.com/coredns/policy/plugin/firewall/policy"
-	rq "github.com/coredns/policy/plugin/pkg/rqdata"
+	"github.com/amir-microsoft/policy/plugin/firewall/policy"
+	rq "github.com/amir-microsoft/policy/plugin/pkg/rqdata"
 	"github.com/infobloxopen/go-trees/domain"
 	"github.com/infobloxopen/themis/pdp"
 	"github.com/miekg/dns"

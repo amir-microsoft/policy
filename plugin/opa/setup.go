@@ -8,7 +8,7 @@ import (
 	"github.com/coredns/coredns/core/dnsserver"
 	"github.com/coredns/coredns/plugin"
 	pkgtls "github.com/coredns/coredns/plugin/pkg/tls"
-	"github.com/coredns/policy/plugin/pkg/rqdata"
+	"github.com/amir-microsoft/policy/plugin/pkg/rqdata"
 )
 
 func init() {

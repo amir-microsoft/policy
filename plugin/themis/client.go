@@ -1,7 +1,7 @@
 package themis
 
 import (
-	"github.com/coredns/policy/plugin/themis/client"
+	"github.com/amir-microsoft/policy/plugin/themis/client"
 	"log"
 	"sync/atomic"
 
